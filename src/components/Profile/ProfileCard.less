@@ -1,0 +1,100 @@
+@import "/src/styles/variables.less";
+
+#Container_profile {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    .background_glass();
+    border-radius: @border_radius;
+    padding: 24px;
+
+    h2 {
+        .format_title_card();
+    }
+
+    span {
+        .format_description();
+    }
+
+
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .profile_avatar {
+
+            h1 {
+                .format_title();
+                margin-top: 16px;
+            }
+
+            img {
+                border-radius: @border_radius;
+                width: 160px;
+                height: 150px;
+                .backgroundCard_glass();
+            }
+        }
+
+        .profile_status {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: 100%;
+
+            .status_rewards {
+                display: flex;
+                gap: 8px;
+            }
+        }
+
+    }
+
+    .container_achievements {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+
+        .achievements {
+            display: flex;
+            gap: 8px;
+        }
+
+    }
+
+    .container_insignia {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .insignia {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    .container_infos {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .container_friends {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .friend {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    @media (min-width: 1380px) {
+        width: 800px;
+        flex-direction: column;
+    }
+}

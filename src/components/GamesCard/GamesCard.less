@@ -1,0 +1,59 @@
+@import '/src/styles/variables.less';
+
+#games_container {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+
+    .game_card {
+        position: relative;
+        border: 3px solid #3E4357;
+        border-radius: 10px;
+        .backgroundCard_glass();
+
+        width: 230px;
+        height: 330px;
+
+        display: flex;
+        overflow: hidden;
+
+        p {
+            .format_description();
+        }
+
+        .game__img {
+            min-width: 100%;
+            min-height: 100%;
+
+            transition: transform .8s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .card-label__container {
+            position: absolute;
+            bottom: 30px;
+            right: 0;
+
+            .card-label__content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #0d0d0dc1;
+
+                color: white;
+                font-size: 12px;
+                font-weight: bold;
+
+                height: 40px;
+                padding: 0px 50px;
+            }
+
+        }
+
+    }
+}

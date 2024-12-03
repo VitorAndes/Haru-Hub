@@ -1,0 +1,72 @@
+@text: #ebe9fc;
+@primary: #7631d8;
+@secondary: #140024;
+@accent: #5000c2;
+
+// Fonts
+@font_title: "Inter", serif;
+@font_description: "Inter", serif;
+
+// Border-radius
+@border_radius: 8px;
+
+
+.clamp-font(@min-size, @preferred-size, @max-size) {
+    font-size: @min-size;
+
+    @media (min-width: 768px) {
+        font-size: @preferred-size;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: @max-size;
+    }
+}
+
+.background {
+    background: rgb(80, 0, 194);
+    background: -moz-radial-gradient(circle, rgba(80, 0, 194, 1) 0%, rgba(20, 0, 36, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(80, 0, 194, 1) 0%, rgba(20, 0, 36, 1) 100%);
+    background: radial-gradient(circle, rgba(80, 0, 194, 1) 0%, rgba(20, 0, 36, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5000c2", endColorstr="#140024", GradientType=1);
+}
+
+.background_glass {
+    background: rgba(20, 0, 36, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.backgroundCard_glass {
+    background: rgba(144, 19, 254, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.format_description {
+    font-family: @font_description;
+    font-weight: lighter;
+    line-height: 20px;
+    letter-spacing: -.2px;
+    .clamp-font(14px, 16px, 18px);
+}
+
+.format_title_card {
+    font-family: @font_title;
+    font-weight: bolder;
+    letter-spacing: -1px;
+    .clamp-font(20px, 24px, 28px);
+}
+
+.format_title {
+    font-family: @font_title;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    .clamp-font(24px, 28px, 29px);
+}

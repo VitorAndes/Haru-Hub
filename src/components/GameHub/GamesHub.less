@@ -1,0 +1,22 @@
+@import '/src/styles/variables.less';
+
+#Container_gameHub {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .gameHub_header {
+        height: 70px;
+        width: 100%;
+        border-radius: @border_radius;
+        .background_glass();
+        display: flex;
+        align-items: center;
+        padding: 12px;
+
+        h1 {
+            .format_title();
+        }
+    }
+
+}
