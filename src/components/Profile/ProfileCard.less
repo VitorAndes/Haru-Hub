@@ -17,24 +17,30 @@
         .format_description();
     }
 
-
     .profile {
         display: flex;
         align-items: center;
         gap: 8px;
 
         .profile_avatar {
-
-            h1 {
-                .format_title();
-                margin-top: 16px;
-            }
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 8px;
 
             img {
                 border-radius: @border_radius;
                 width: 160px;
                 height: 150px;
                 .backgroundCard_glass();
+            }
+
+            a {
+                color: @text;
+
+                &:hover {
+                    color: @secondary;
+                }
             }
         }
 
@@ -44,9 +50,13 @@
             gap: 15px;
             height: 100%;
 
-            .status_rewards {
-                display: flex;
-                gap: 8px;
+            h2 {
+                .format_title();
+                margin-top: 16px;
+            }
+
+            p {
+                .format_description();
             }
         }
 
