@@ -3,9 +3,8 @@
 #games_container {
     display: flex;
     padding: 10px;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px 0px;
+    gap: 20px;
 
     .game_card {
         position: relative;
@@ -13,7 +12,7 @@
         border-radius: 10px;
         .backgroundCard_glass();
 
-        width: 230px;
+        width: 520px;
         height: 330px;
 
         display: flex;
@@ -35,6 +34,9 @@
         }
 
         .card-label__container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             position: absolute;
             bottom: 30px;
             right: 0;
@@ -43,14 +45,31 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #0d0d0dc1;
+                .background_glass();
 
-                color: white;
+                color: @text;
                 font-size: 12px;
                 font-weight: bold;
 
                 height: 40px;
                 padding: 0px 50px;
+
+
+
+            }
+
+            .card-label__genres {
+                display: flex;
+                justify-content: end;
+                flex-wrap: wrap;
+                gap: 8px;
+
+                span {
+                    text-wrap: wrap;
+                    border-radius: @border_radius;
+                    padding: 12px;
+                    background: @primary;
+                }
             }
 
         }
