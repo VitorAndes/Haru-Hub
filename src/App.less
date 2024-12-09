@@ -1,26 +1,19 @@
 @import './styles/variables.less';
 
-#body {
+#container {
     display: flex;
-    justify-content: center;
+    margin: auto;
     min-height: 100vh;
     padding: 12px;
 
-    #container {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
+    @media (min-width: 768px) {
         width: 100%;
+        padding: 2rem;
+    }
 
-        @media (min-width: 768px) {
-            width: 100%;
-            padding: 2rem;
-        }
-
-        @media (min-width: 1380px) {
-            width: 2000px;
-            padding: 2rem;
-            flex-direction: row;
-        }
+    @media (min-width: 1380px) {
+        width: 1600px;
+        padding: 2rem;
+        flex-direction: row;
     }
 }
